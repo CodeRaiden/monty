@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * pint - Prints value on top of stack, or exit if the stack is empty
+ * m_pint - Prints value on top of stack, or exit if the stack is empty
  * @stack: Double pointer to the head of the stack
  * @line_number: The line number of the current operation
  *
  * Return: void
  */
-void pint(stack_t **stack, unsigned int line_number)
+void m_pint(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 
