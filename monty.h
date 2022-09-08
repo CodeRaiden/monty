@@ -58,8 +58,8 @@ typedef struct instruction_s
 
 void get_op(char *op, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
-void push2(stack_t **stack, int n);
-void pall(stack_t **stack, unsigned int line_number);
+void m_push2(stack_t **stack, int n);
+void _pall(stack_t **stack, unsigned int line_number);
 void m_pint(stack_t **stack, unsigned int line_number);
 void m_pop(stack_t **stack, unsigned int line_number);
 void m_swap(stack_t **stack, unsigned int line_number);
