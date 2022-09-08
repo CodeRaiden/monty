@@ -10,50 +10,50 @@
 #include <unistd.h>
 
 /**
- * struct var_s - Struct to contain the main variables of the Monty interpreter
- * @queue: Flag that determines if in stack vs queue mode
- * @stack_len: The length of stack
+ * struct var_s - struct to contain the main variables of the Monty interpreter
+ * @queue: flag to determine if in stack vs queue mode
+ * @stack_len: length of the stack
  */
 typedef struct var_s
 {
-        int queue;
-        size_t stack_len;
+	int queue;
+	size_t stack_len;
 } var_t;
 
 #define STACK 0
 #define QUEUE 1
 
-/* The global struct to hold flag for queue and stack length */
+/* global struct to hold flag for queue and stack length */
 extern var_t var;
 
 /**
- * struct stack_s - Doubly linked list representation of a stack or queue
+ * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
- * @prev: Points to previous element of the stack or queue
- * @next: Points to the next element of the stack or queue
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
  *
- * Description: Doubly linked list's node structure
+ * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO alx project
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
- * struct instruction_s - Opcoode and its function
- * @opcode: The opcode
- * @f: The function to handle the opcode
+ * struct instruction_s - opcoode and its function
+ * @opcode: the opcode
+ * @f: function to handle the opcode
  *
- * Description: Opcode and its function
+ * Description: opcode and its function
  * for stack, queues, LIFO, FIFO alx project
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 void get_op(char *op, stack_t **stack, unsigned int line_number);
