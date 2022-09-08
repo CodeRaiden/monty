@@ -22,13 +22,13 @@ static int check_for_digit(char *arg)
 }
 
 /**
- * push - Pushes an integer onto the stack
+ * m_push - Pushes an integer onto the stack
  * @stack: Double pointer to the beginning of the stack
  * @line_number: The script's line number
  *
  * Return: void
  */
-void push(stack_t **stack, unsigned int line_number)
+void m_push(stack_t **stack, unsigned int line_number)
 {
 	char *arg;
 	int n;
